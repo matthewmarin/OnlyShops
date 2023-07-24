@@ -33,7 +33,7 @@ function Header() {
           className="cursor-pointer flex relative"
         >
           <BsCartFill className="text-4xl" />
-          <div className="bg-blue-300 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-black rounded-full flex justify-center items-center">
+          <div className="bg-blue-300 absolute -right-2 -bottom-2 text-[20px] w-[25px] h-[25px] font-bold text-black rounded-full flex justify-center items-center">
             {itemAmount}
           </div>
         </div>
