@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { IoMdArrowForward } from "react-icons/io";
-import { FiTrash2 } from "react-icons/fi";
+import { FaTrashAlt } from "react-icons/fa";
 import CartItem from "./CartItem";
 import { SidebarContext } from "../contexts/SidebarContext";
 import { CartContext } from "../contexts/CartContext";
 
 function Sidebar() {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart } = useContext(CartContext);
+  const { cart, clearCart } = useContext(CartContext);
   return (
     <div
       className={`${
@@ -30,9 +30,15 @@ function Sidebar() {
         })}
       </div>
       <div>
-        <div>
+        <div className="flex w-full justify-between items-center font-bold text-2xl">
           <div>
-            <span>Total Price</span>
+            <span>Total:</span>$1000
+          </div>
+          <div
+            onClick={clearCart}
+            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl"
+          >
+            <FaTrashAlt />
           </div>
         </div>
       </div>
