@@ -14,10 +14,10 @@ function ProductsCard({ products = [] }) {
                 className="lg:w-1/4 md:w-1/2 p-4 w-full "
                 key={id}
               >
-                <div className="block relative h-48 rounded overflow-hidden">
+                <div className=" block h-48 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
-                    className="object-contain object-center w-full h-full flex"
+                    className="object-contain object-center w-full h-full flex "
                     src={image}
                   />
                 </div>

@@ -45,7 +45,7 @@ const Features = ({ cards = [1, 2, 3] }) => {
                       Blue bottle crucifix vinyl post-ironic four dollar toast
                       vegan taxidermy. Gastropub indxgo juice poutine.
                     </p>
-                    <a className="mt-3 text-blue-500 inline-flex items-center">
+                    <div className="mt-3 text-blue-500 inline-flex items-center">
                       Learn More
                       <svg
                         fill="none"
@@ -58,7 +58,7 @@ const Features = ({ cards = [1, 2, 3] }) => {
                       >
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                       </svg>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </Link>
