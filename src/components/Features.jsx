@@ -5,6 +5,14 @@ const Features = ({ cards = [1, 2, 3] }) => {
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap -m-4">
+          <div className="flex flex-col text-center w-full mb-20">
+            <h2 className="text-xs text-blue-500 tracking-widest font-medium title-font mb-1">
+              PRODUCTS
+            </h2>
+            <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">
+              Most Popular Products
+            </h1>
+          </div>
           {cards?.map((card) => {
             return (
               <div key={card} className="p-4 md:w-1/3">
@@ -23,8 +31,8 @@ const Features = ({ cards = [1, 2, 3] }) => {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                       </svg>
                     </div>
-                    <h2 className="text-gray-900 text-lg title-font font-medium">
-                      Shooting Stars
+                    <h2 className="text-gray-900 text-lg title-font font-medium capitalize">
+                      {card}
                     </h2>
                   </div>
                   <div className="flex-grow">
