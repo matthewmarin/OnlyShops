@@ -1,21 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function Products({ products = [] }) {
+function ProductsCard({ products = [] }) {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font shadow-lg">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap -m-4">
           {products.map((products) => {
             const { id, title, price, description, category, image } = products;
             return (
-              <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
-                <a className="block relative h-48 rounded overflow-hidden">
+              <Link
+                to={`/products/${id}`}
+                className="lg:w-1/4 md:w-1/2 p-4 w-full "
+                key={id}
+              >
+                <div className="block relative h-48 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
-                    className="object-contain object-center w-full h-full block"
+                    className="object-contain object-center w-full h-full flex"
                     src={image}
                   />
-                </a>
+                </div>
                 <div className="mt-4">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                     {category}
@@ -25,7 +30,7 @@ function Products({ products = [] }) {
                   </h2>
                   <p className="mt-1">${price}</p>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -34,4 +39,4 @@ function Products({ products = [] }) {
   );
 }
 
-export default Products;
+export default ProductsCard;

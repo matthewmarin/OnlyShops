@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import Product from "./pages/Product";
+import ProductsItem from "./pages/ProductsItem";
 function App() {
   return (
     <div>
@@ -11,8 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products/:id" element={<Product />} />
+        <Route path="/products" element={<ProductsItem />} />
+        <Route path="*" element={<div>404</div>} />
       </Routes>
-      <Home />
       <Footer />
     </div>
   );

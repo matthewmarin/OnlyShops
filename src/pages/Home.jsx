@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../components/Hero";
-import Products from "../components/Products";
+import Products from "../components/ProductsCard";
 import Features from "../components/Features";
 import StatusCard from "../components/StatusCard";
 
@@ -34,7 +34,6 @@ function Home() {
       ) : (
         <div>Loading.....</div>
       )}
-      <Products />
       <Features />
       <StatusCard />
     </>
